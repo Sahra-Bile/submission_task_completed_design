@@ -1,0 +1,46 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+//   welcome sida behövs bryts texten i mobil läge
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1em;
+  height: 100%;
+  color: v.$primary_1;
+  line-height: 50px;
+  margin-top: 5px;
+
+  position: relative;
+
+  &__to {
+    font-size: 36px;
+    padding: 10px;
+  }
+
+  &__journey {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  &__figure {
+    position: relative;
+
+    &__arrow {
+      position: absolute;
+      top: 6em;
+      font-size: 1.5em;
+      text-decoration: none;
+      transform: rotate(90deg);
+      color: v.$primary_1;
+
+      @include m.desktop {
+        top: 9em;
+      }
+    }
+  }
+}

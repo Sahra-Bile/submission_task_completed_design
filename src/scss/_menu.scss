@@ -1,0 +1,13 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.checkbtn {
+  color: v.$primary_1;
+  font-size: 25px;
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+#check {
+  display: none;
+}

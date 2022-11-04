@@ -1,0 +1,76 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+
+      @include m.desktop {
+        width: 40%;
+      }
+
+      &__title {
+        top: 1em;
+      }
+
+      &__quote {
+        display: flex;
+        background-color: #d3d3d3;
+        padding: 2em;
+        width: 70%;
+        border-radius: 5%;
+        align-items: flex-start;
+        font-size: 20px {
+          position: relative;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    @include m.desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    img {
+      border-radius: 50%;
+      width: 70%;
+      box-shadow: -1px 6px 28px 24px rgba(173, 168, 168, 0.57);
+    }
+  }
+}
+
+.figure {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__arrow {
+    color: v.$primary_2;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+  }
+}
